@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("kl.jpg"); /* Replace with your actual background image */
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .logo h2 {
+    color: white;
+    margin: 0;
+}
+
+.navbar .rest ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .rest ul li a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login {
+    text-align: center;
+    margin: 30px;
+    color: #FFF;
+}
+
+.login button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-bar {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background: transparent;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.chart-container {
+    display: none;
+    width: 60%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    padding: 15px;
+    border-radius: 15px;
+}
+
+canvas {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}

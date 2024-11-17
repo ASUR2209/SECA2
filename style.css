@@ -1,0 +1,339 @@
+:root{
+    --base-clr:#11121a;
+    --line-clr:#42434a;
+    --hover-clr:#222533;
+    --text-clr:#e6e6ef;
+    --accent-clr:#5e63ff;
+    --secondary-text-clr:#b0b3c1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+#sidebar{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 200px;
+    padding: 5px 1em;
+    background-color: var(--base-clr);
+    border-right: 1px solid var(--line-clr);
+    position: sticky;
+    top: 0;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+}
+#sidebar ul{
+    list-style: none;
+}
+#sidebar > ul > li:first-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    .logo{
+        font-weight: 600;
+    }
+}
+#sidebar ul li.active a > {
+    color: var(--accent-clr);
+}
+#sidebar ul li.active > svg{
+    fill: var(--accent-clr);
+}
+
+#sidebar a, #sidebar .dropdown-btn,#sidebar .logo{
+    border-radius: .5em;
+    padding: .85em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    gap: 1em;
+}
+.dropdown-btn{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+#sidebar svg{
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+
+
+
+
+
+
+
+
+
+main{
+    padding: min(30px,7%);
+}
+main p{
+    color: var(--secondary-text-clr);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.container{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    margin-bottom: 20px;
+    padding: min(3em,15%);
+    
+
+
+
+
+
+
+
+    
+}
+.container {
+    text-align: center;
+    padding: 20px;
+}
+.container video{
+    width: 500px;
+    /* position: sticky; */
+    
+}
+
+.search-bar {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    /* padding: 10px; */
+    width: 300px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background: transparent;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    
+}
+
+.chart-container {
+    display: none;
+    width: 60%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    padding: 15px;
+    border-radius: 15px;
+}
+
+canvas {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+#toggle-btn {
+    background-color: #444;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#toggle-btn:hover {
+    background-color: #666;
+    transform: scale(1.1);
+}
+
+#toggle-btn svg {
+    fill: #fff;
+    transition: fill 0.3s;
+}
+
+#toggle-btn:hover svg {
+    fill: #ddd;
+}
+
+
+
+
+
+
+/* Basic Sidebar Styles */
+#sidebar {
+    width: 250px;
+    background-color: var(--base-clr);
+    padding: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar li.active {
+    background-color: #ddd;
+    border-radius: 8px;
+}
+
+/* Links Styling */
+#sidebar a {
+    text-decoration: none;
+    color:var(--text-clr);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 100;
+}
+
+#sidebar a:hover {
+    background-color: #e0e0e0;
+}
+
+/* SVG Icon Styling */
+#sidebar svg {
+    margin-right: 10px;
+    transition: fill 0.3s;
+}
+
+#sidebar a:hover svg {
+    fill: #1a73e8;
+}
+
+/* Toggle Button */
+#toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.3s;
+}
+
+#toggle-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Text Styling */
+#sidebar span {
+    font-size: 16px;
+    color: #333;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #5f6368;
+}
+
+
+
+
+/* Video container styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Background video styling */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: cover;
+    opacity: 0.5; /* Adjust for desired transparency */
+}
+
+/* Search container on top of the video */
+.search-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.6); Semi-transparent background */
+    border-radius: 30px; /* Rounded edges */
+    max-width: 500px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Input field styling */
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    width: 80%;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+}
+
+/* Search button styling */
+.search-container button {
+    padding: 0; /* Remove default padding */
+    border: none;
+    background-color: #333; /* Match the input field */
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search icon styling */
+.search-container button img.search-icon {
+    width: 20px; /* Adjust the size of the icon as needed */
+    height: 20px;
+    padding: 8px; /* Add padding for spacing inside the button */
+    filter: invert(1); /* If you want to make the icon white, depending on icon color */
+}
